@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>demo</title>
+  <script type="text/javascript" src="dist/pagination.js"></script>
+  <script type="text/javascript">
+    var arr = []
+
+    for (var i = 0; i < 115; i++) {
+      arr.push(i+1)
+    }
+
+    var p = new Pagination(arr.length, 11)
+    console.log(arr.slice.apply(arr, p.page(1)))
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
