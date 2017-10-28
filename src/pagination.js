@@ -19,7 +19,8 @@ Pagination.prototype.page = function (n) {
   } else {
     this.currentPage = page
   }
-  var index1 = (this.currentPage - 1) * this.pageSize
+  console.log(this.currentPage)
+  var index1 = (this.currentPage > 0 ? this.currentPage - 1 : 0) * this.pageSize
   var index2 = this.currentPage * this.pageSize
   index2 = index2 > this.total ? this.total : index2
   // slice(index1, index2) 实际arr[index1] ~ arr[index2-1]
