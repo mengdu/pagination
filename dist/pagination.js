@@ -20,7 +20,8 @@ function Pagination(total, len) {
 Pagination.prototype.page = function (n) {
   var page = Math.abs(~~n) || this.currentPage;
   if (page > this.pageCount) {
-    this.currentPage = this.pageCount;
+    // 防止出现当前页为零情况
+    this.currentPage = this.pageCount || 1;
   } else {
     this.currentPage = page;
   }
